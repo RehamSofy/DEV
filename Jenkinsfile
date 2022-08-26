@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-           junit '**/target/*.xml'
+           junit '/target/*.xml'
         }
     }
     
