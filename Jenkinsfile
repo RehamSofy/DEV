@@ -19,5 +19,9 @@ pipeline {
         echo 'I will say Hello only if job is failure'
     }
 } 
+  
+  triggers {
+    cron('H/15 * * * *')
+}
 
 }
