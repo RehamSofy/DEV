@@ -21,11 +21,19 @@ pipeline {
         }
     }
     
+    stage('Code Coverage'){
+      steps{
+         [ $class: 'JacocoPublisher' ]
+      }
+    }
+    
      stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
         }
+    
+    
   }
   
   post {
