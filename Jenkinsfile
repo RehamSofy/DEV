@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent any tools { maven 'maven-3.8.4' } 
   
   environment { 
     NAME = 'reham farouk'
@@ -10,9 +10,9 @@ pipeline {
 }
   
   stages {
-    stage ('Print') {
+    stage ('Build'){
        steps {
-            echo "Hello Devops Engineers"
+            sh 'mvn clean package'
         }
     }
   }
