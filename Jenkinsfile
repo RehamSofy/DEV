@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage ('Build'){
        steps {
-            bat 'mvn -f Demo clean package'
+            bat 'mvn -f Demo clean install'
         }
     }
     stage('Test') {
@@ -21,7 +21,12 @@ pipeline {
            junit '**/target/*.xml'
         }
     }
-
+    
+     stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
   }
   
   post {
