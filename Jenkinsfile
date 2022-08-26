@@ -22,7 +22,6 @@ pipeline {
                 echo 'Quality Gate'
               }
             }
-            }
     stage('Test') {
       steps {
            junit 'Demo/target/surefire-reports/*.xml'
