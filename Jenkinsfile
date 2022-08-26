@@ -15,6 +15,13 @@ pipeline {
             bat 'mvn -f Demo clean package'
         }
     }
+    stage('Test') {
+      steps {
+            bat 'make check || true' 
+           junit '**/target/*.xml'
+        }
+    }
+
   }
   
   post {
