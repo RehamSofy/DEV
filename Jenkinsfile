@@ -1,5 +1,9 @@
 pipeline {
-  agent { any 'maven-3.8.4' } 
+  agent any
+     tools { 
+        maven 'Maven 3.8.4' 
+        jdk 'jdk11' 
+    }
   
   environment { 
     NAME = 'reham farouk'
