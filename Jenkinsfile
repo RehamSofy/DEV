@@ -17,7 +17,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-           junit '/target/*.xml'
+           junit 'Demo/target/surefire-reports/*.xml'
         }
     }
     
