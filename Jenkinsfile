@@ -18,7 +18,6 @@ pipeline {
     stage('Test') {
       steps {
            junit '**/target/*.xml'
-           junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
         }
     }
     
