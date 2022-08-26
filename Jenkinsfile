@@ -23,7 +23,7 @@ pipeline {
     
     stage('Code Coverage'){
       steps{
-         [ $class: 'JacocoPublisher' ]
+         step ([ $class: 'JacocoPublisher' ])
       }
     }
     
